@@ -1,0 +1,86 @@
+% Formato de portafolio
+% Documento adaptado de https://github.com/PlasmaPhysicsUdeC/FondecyTeX por Roberto Navarro <roberto.navarro@udec.cl> 
+
+% Este documento es modular, es decir, esta separado en varios
+% archivos para facilitar su uso. Ver uso del paquete `subfiles`.
+% https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects
+
+\documentclass[twoside]{report}
+\usepackage[table]{xcolor}
+\usepackage[paper=letterpaper,left=3cm,right=3cm,top=3cm,bottom=2cm,includefoot]{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[colorlinks]{hyperref}
+\usepackage{hhline}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setenumerate{itemsep=-3pt,topsep=3pt}
+\setdescription{itemsep=-3pt,topsep=3pt,leftmargin=!,labelwidth=4.5cm}
+\usepackage{pgfgantt}
+\usepackage{graphicx}   \graphicspath{{./img/} {./tex/img/}}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% bibliografia: descomente estas dos lineas para usar estilo numerico, e.g. [1].
+\usepackage[square,numbers,sort&compress]{natbib}
+\bibliographystyle{apsrev4-1}
+
+% bibliografia: descomente estas dos lineas para usar estilo autor-año, e.g. (Navarro, 2022).
+% \usepackage[authoryear]{natbib}
+% \bibliographystyle{aipauth4-1}
+
+
+% subfiles permite que el documento sea modular
+\usepackage{subfiles} 
+
+%%% Comente/Descomente las siguientes lineas para cambiar la fuente del texto
+% \usepackage{DejaVuSans}
+% \renewcommand*\familydefault{\sfdefault}
+% \usepackage{sansmath}
+% \sansmath
+
+
+
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot{}
+\fancyfoot[RE,RO]{\thepage}
+\fancyhead[LO,LE]{\textcolor[RGB]{127,127,127}{Portafolio - Física Computacional II (2022)}} 
+
+\definecolor{tcc}{RGB}{217,217,217} % Table cell color
+
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\setlength{\arrayrulewidth}{0.5pt}
+\renewcommand{\arraystretch}{2}
+
+% \renewcommand{\thesection}{\alph{section})}
+% \renewcommand{\thesubsection}{\alph{section}.\arabic{subsection}}
+
+\begin{document}
+
+\subfile{tex/portada}
+
+
+\tableofcontents
+
+
+
+%%% con \subfile se incluyen archivos externos
+\subfile{tex/introduccion}
+\subfile{tex/presentacion-estudiante}
+
+\chapter{Actividades de laboratorio}  % cuerpo del portafolio
+\subfile{tex/0819-derivada-numerica}
+\subfile{tex/0826-git}
+
+\subfile{tex/conclusion}
+
+
+% lista de referencias guardadas en referencias.bib
+\bibliography{referencias}
+
+\end{document}
