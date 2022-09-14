@@ -20,6 +20,14 @@
 \usepackage{pgfgantt}
 \usepackage{graphicx}   \graphicspath{{./img/} {./tex/img/}}
 
+% insertar codigo en documento latex
+\usepackage{minted}
+\definecolor{LightGray}{gray}{0.92}
+\newminted{python}{ linenos,breaklines,mathescape,texcomments,xleftmargin=\parindent, numbersep=8pt,  bgcolor=LightGray
+}
+\renewcommand\listingscaption{C\'odigo}
+
+% configuracion de idioma
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
