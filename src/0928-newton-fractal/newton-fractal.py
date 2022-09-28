@@ -46,10 +46,10 @@ it = sol[:,:,1].real
 fig, ax = plt.subplots(1,2, figsize=(8.6,4), sharey=True)
 
 ang = ax[0].imshow(np.angle(z).T, extent=(xmin, xmax, ymin, ymax),
-                   origin="lower", aspect="auto", cmap="viridis")
+                   origin="lower", aspect="equal", cmap="viridis")
 
 niter = ax[1].imshow(it.T, extent=(xmin, xmax, ymin, ymax),
-                     origin="lower", aspect="auto", cmap="viridis" )
+                     origin="lower", aspect="equal", cmap="viridis" )
 
 
 ax[0].set_ylabel(r"Im($z$)")
@@ -63,5 +63,5 @@ for a in ax:
     a.set_xlim(xmin, xmax)
     a.set_xlabel(r"Re($z$)")
 
-plt.tight_layout()
-plt.show()
+#plt.tight_layout()
+plt.savefig("../../tex/img/newton-fractal.png", bbox_inches="tight")
