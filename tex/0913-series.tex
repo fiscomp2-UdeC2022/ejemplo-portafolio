@@ -1,21 +1,8 @@
 \documentclass[../portafolio.tex]{subfiles}
 
-% Solo agregue paquetes en el preámbulo de ../portafolio.tex
-
 \begin{document}
 
-% En esta sección, explique en detalle los siguientes aspectos:
-% - Fecha de realización de la actividad
-% - Título de la actividad (dentro de \section)
-% - Un párrafo explicando cuál es el objetivo de la actividad
-% - Nombre de personas con quien trabajó en la actividad
-% - Una selección de evidencias de que usted hizo esta actividad (imágenes, códigos, respuestas a un problema teórico, etc.)
-% - Una conclusión breve (qué aprendió con la actividad, qué no entendió, qué faltó trabajar, qué recomienda para futuras sesiones)
-
-% Numero máximo de palabras en esta sección: 1000 palabras.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Cálculo de una integral usando series} 
+\chapter{Cálculo de una integral usando series} 
 
 \hfill \textbf{Fecha de la actividad:} 13 de septiembre de 2022
 
@@ -33,7 +20,7 @@ para lo cual usaremos dos estrategias distintas: Evaluaremos la ecuación \eqref
 
 %---------------------------------------------------------------------------------
 % Selección de evidencias
-\subsection{Regla trapezoidal}
+\section{Regla trapezoidal}
 Según la regla trapezoidal, aproximamos la ecuación \eqref{eq:In_series_quadrature} como:
 \begin{align}
   \label{eq:In_quad_trapz}
@@ -49,7 +36,7 @@ donde $f(x)=x^n \sin x$, $x_k=k/N$, y $N$ es el número de subintervalos entre $
   In = (0.5*(fk[0] + fk[-1]) + np.sum(fk[1:-1])) / Nmax
 \end{pythoncode}
 
-\subsection{Evaluación mediante series}
+\section{Evaluación mediante series}
 Integrando (\ref{eq:In_series_quadrature}) por partes dos veces, se tiene que:
 \begin{align*}
   I_n
@@ -112,5 +99,5 @@ valores de $N$ mayores para mejorar la aproximación.
 \end{figure}
   
 
-  
+
 \end{document}

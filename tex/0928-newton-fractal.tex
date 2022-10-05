@@ -2,18 +2,7 @@
 
 \begin{document}
 
-% En esta sección, explique en detalle los siguientes aspectos:
-% - Fecha de realización de la actividad
-% - Título de la actividad (dentro de \section)
-% - Un párrafo explicando cuál es el objetivo de la actividad
-% - Nombre de personas con quien trabajó en la actividad
-% - Una selección de evidencias de que usted hizo esta actividad (imágenes, códigos, respuestas a un problema teórico, etc.)
-% - Una conclusión breve (qué aprendió con la actividad, qué no entendió, qué faltó trabajar, qué recomienda para futuras sesiones)
-
-% Numero máximo de palabras en esta sección: 1000 palabras.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Fractal de Newton} 
+\chapter{Fractal de Newton} 
 
 \hfill \textbf{Fecha de la actividad:} 28 de septiembre de 2022
 
@@ -44,9 +33,8 @@ método.
 
 %---------------------------------------------------------------------------------
 % Selección de evidencias
-El método de Newton-Raphson~\cite{ref:newton-raphson} se codifica en el código~\ref{cod:newton}.
-\begin{listing}
-  \begin{pythoncode}
+El método de Newton-Raphson~\cite{ref:newton-raphson} se codifica a continuación:
+\begin{pythoncode}
 def newton(semilla, N=3, maxerr=1e-3):
     z   = semilla
     err = maxerr+1
@@ -58,9 +46,6 @@ def newton(semilla, N=3, maxerr=1e-3):
 
     return z, it
 \end{pythoncode}
-\caption{Método de Newton para encontrar los ceros de $f(z)=z^3-1$.}
-\label{cod:newton}
-\end{listing}
 
 
 Luego, escogemos varias semillas $z_0$ en el plano complejo dentro de la

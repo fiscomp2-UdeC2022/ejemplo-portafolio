@@ -57,7 +57,8 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyfoot{}
 \fancyfoot[RE,RO]{\thepage}
-\fancyhead[LO,LE]{\textcolor[RGB]{127,127,127}{Portafolio - Física Computacional II (2022)}} 
+\fancyfoot[LE,LO]{\textcolor[RGB]{127,127,127}{Portafolio - Física Computacional II (2022)}} 
+\fancyhead[RO,LE]{}
 
 \definecolor{tcc}{RGB}{217,217,217} % Table cell color
 
@@ -81,10 +82,13 @@
 \subfile{tex/introduccion}
 \subfile{tex/presentacion-estudiante}
 
-\chapter{Actividades de laboratorio}  % cuerpo del portafolio
+\part*{Actividades de laboratorio}  % cuerpo del portafolio
+\addcontentsline{toc}{part}{Actividades de laboratorio}
+\markboth{Actividades de laboratorio}{}
+
 \subfile{tex/0913-series}
 \subfile{tex/0928-newton-fractal}
-% \subfile{tex/0819-derivada-numerica}
+\subfile{tex/1004-overflow}
 % \subfile{tex/0826-git}
 
 \subfile{tex/conclusion}
