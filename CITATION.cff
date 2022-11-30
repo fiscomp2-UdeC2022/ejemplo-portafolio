@@ -1,0 +1,9 @@
+cff-version: 0.0.1
+message: "Si quiere citar, use la informacion que aparece abajo"
+authors:
+- family-names: "Navarro"
+  given-names: "Roberto"
+
+title: "Portafolio Fisica computacional II 2022"
+version: 0.0.1
+date-released: 2022-11-30
